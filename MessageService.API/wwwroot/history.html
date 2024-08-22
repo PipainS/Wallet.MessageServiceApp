@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message History</title>
+</head>
+<body>
+    <h1>Messages from the Last 10 Minutes</h1>
+    <ul id="messages"></ul>
+
+    <script>const messagesList = document.getElementById('messages');
+
+        fetch('http://localhost:5103/api/messages?from=2024-08-01T10:00:00Z&to=2024-08-30T10:10:00Z')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(message => {
+                    const newMessage = document.createElement('li');
+                    newMessage.textContent = `${message.sequence}: ${message.text} (${message.timestamp})`;
+                    messagesList.appendChild(newMessage);
+                });
+            })
+            .catch(error => console.error('Error fetching messages:', error));</script>
+</body>
+</html>

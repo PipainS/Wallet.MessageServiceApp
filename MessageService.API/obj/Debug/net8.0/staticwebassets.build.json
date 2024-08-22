@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "Osbtxs+Su2KoBR4pBp1H4AL+08GZUJAvI9ULjThnX4g=",
+  "Source": "MessageService.API",
+  "BasePath": "_content/MessageService.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MessageService.API\\wwwroot",
+      "Source": "MessageService.API",
+      "ContentRoot": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\wwwroot\\",
+      "BasePath": "_content/MessageService.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\wwwroot\\history.html",
+      "SourceId": "MessageService.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\wwwroot\\",
+      "BasePath": "_content/MessageService.API",
+      "RelativePath": "history.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\history.html"
+    },
+    {
+      "Identity": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\wwwroot\\index.html",
+      "SourceId": "MessageService.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\wwwroot\\",
+      "BasePath": "_content/MessageService.API",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

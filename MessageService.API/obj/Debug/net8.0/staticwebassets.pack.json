@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\wwwroot\\history.html",
+      "PackagePath": "staticwebassets\\history.html"
+    },
+    {
+      "Id": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MessageService.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MessageService.API.props",
+      "PackagePath": "build\\MessageService.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MessageService.API.props",
+      "PackagePath": "buildMultiTargeting\\MessageService.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MessageService.API.props",
+      "PackagePath": "buildTransitive\\MessageService.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

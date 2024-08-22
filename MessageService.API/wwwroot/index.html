@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+</head>
+<body>
+    <h1>Real-Time Messages</h1>
+    <ul id="messages"></ul>
+
+    <script>const socket = new WebSocket("ws://localhost:5103/ws");
+
+        socket.onmessage = function(event) {
+            const messagesList = document.getElementById('messages');
+            const newMessage = document.createElement('li');
+            newMessage.textContent = event.data;
+            messagesList.appendChild(newMessage);
+        };
+
+        socket.onopen = function(event) {
+            console.log("Connected to WebSocket server.");
+        };
+
+        socket.onclose = function(event) {
+            console.log("Disconnected from WebSocket server.");
+        };
+
+        socket.onerror = function(error) {
+            console.log("WebSocket error:", error);
+        };</script>
+</body>
+</html>
