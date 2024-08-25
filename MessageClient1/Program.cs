@@ -1,12 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClient(); // Добавьте поддержку HttpClient
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
-
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -24,6 +21,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Message}/{action=Index}/{id?}"); // Измените маршрут по умолчанию для отображения контроллера Message
+    pattern: "{controller=Message}/{action=Index}/{id?}");
 
 app.Run();

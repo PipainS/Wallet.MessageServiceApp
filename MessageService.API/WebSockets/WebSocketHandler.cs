@@ -1,8 +1,9 @@
 ﻿using MessageService.API.Constants;
+using MessageService.API.Repositories;
 using System.Net.WebSockets;
 using System.Text;
 
-public class WebSocketHandler
+public class WebSocketHandler : IWebSocketHandler
 {
     private readonly WebSocketConnectionManager _connectionManager;
     private readonly ILogger<WebSocketHandler> _logger;
@@ -13,6 +14,7 @@ public class WebSocketHandler
         _logger = logger;
     }
 
+    /// inheritdoc /
     public async Task HandleWebSocketConnection(HttpContext context)
     {
         try
@@ -53,6 +55,12 @@ public class WebSocketHandler
         }
     }
 
+    /// <summary>
+    /// Receives messages from a WebSocket connection and processes them using the provided handler.
+    /// </summary>
+    /// <param name="socket">The WebSocket connection from which messages are received.</param>
+    /// <param name="handleMessage">The action to process received messages.</param>
+    /// <returns>A task that represents the asynchronous operation.</returns>
     private async Task ReceiveMessages(WebSocket socket, Action<WebSocketReceiveResult, byte[]> handleMessage)
     {
         var buffer = new byte[WebSocketConstants.BufferSize];
@@ -74,6 +82,7 @@ public class WebSocketHandler
         }
     }
 
+    /// inheritdoc /
     public async Task SendMessageToAllAsync(string message)
     {
         try

@@ -2,6 +2,7 @@
 using MessageClient1.Models;
 using System.Text;
 using Newtonsoft.Json;
+using MessageClient1.Controllers.Constants;
 
 namespace MessageClient1.Controllers
 {
@@ -27,6 +28,8 @@ namespace MessageClient1.Controllers
             if (ModelState.IsValid)
             {
                 message.Timestamp = DateTime.UtcNow;
+                message.UserId = MessageConstants.UserId;
+
                 var content = new StringContent(JsonConvert.SerializeObject(message), Encoding.UTF8, "application/json");
                 var response = await _httpClient.PostAsync("api/messages/add", content);
 

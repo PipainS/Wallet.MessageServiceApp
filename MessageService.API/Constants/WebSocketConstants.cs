@@ -1,11 +1,18 @@
 ﻿namespace MessageService.API.Constants
 {
+    /// <summary>
+    /// Contains constant values used for WebSocket operations.
+    /// </summary>
     public class WebSocketConstants
     {
-        //Начальная позиция в массиве buffer, откуда начинается чтение байтов для преобразования в строку
+        /// <summary>
+        /// The starting position in the buffer array from which bytes are read to be converted into a string.
+        /// </summary>
         public const int BufferStartIndex = 0;
 
-        // Размер буфера для получения данных через WebSocket (4 КБ)
-        public const int BufferSize = 1024 * 4; 
+        /// <summary>
+        /// The size of the buffer used for receiving data via WebSocket (4 KB).
+        /// </summary>
+        public const int BufferSize = 1024 * 4;
     }
 }

@@ -11,18 +11,14 @@
 
 <script src="~/js/websocket-client.js"></script>
 <script>
-    // Создание экземпляра WebSocketClient и подключение
     const wsClient = new WebSocketClient("ws://localhost:5103/ws");
 
-    // Определение функции обработки сообщений
     wsClient.handleMessage = function(message) {
-        // Добавляем сообщение в DOM
         let messagesDiv = document.getElementById("messages");
         let messageElement = document.createElement("p");
         messageElement.textContent = message;
         messagesDiv.appendChild(messageElement);
     };
 
-    // Подключение к WebSocket серверу
     wsClient.connect();
 </script>

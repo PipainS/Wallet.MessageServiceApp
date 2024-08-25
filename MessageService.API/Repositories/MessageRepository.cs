@@ -1,11 +1,10 @@
-﻿using System.Data;
-using Dapper;
+﻿using Dapper;
 using Npgsql;
 using MessageService.API.Models;
 
 namespace MessageService.API.Repositories
 {
-    public class MessageRepository
+    public class MessageRepository : IMessageRepository
     {
         private readonly string _connectionString;
         private readonly ILogger<MessageRepository> _logger;
@@ -16,6 +15,7 @@ namespace MessageService.API.Repositories
             _logger = logger;
         }
 
+        /// inheritdoc /
         public async Task SaveMessageAsync(Message message)
         {
             try
@@ -24,15 +24,19 @@ namespace MessageService.API.Repositories
 
                 using var connection = new NpgsqlConnection(_connectionString);
                 await connection.ExecuteAsync(
-                    "INSERT INTO public.messages (user_name, text, timestamp, client_order) VALUES (@UserName, @Text, @Timestamp, @ClientOrder)", message);
+                    "INSERT INTO public.messages (user_name, text, timestamp, user_id) VALUES (@UserName, @Text, @Timestamp, @UserId)", message);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while adding message to the database");
+                _logger.LogError(ex, "MessageRepository.SaveMessageAsync {Message}{StackTrace}{InnerException}",
+                        ex.Message,
+                        ex.StackTrace,
+                        ex.InnerException?.Message);
                 throw;
             }
         }
 
+        /// inheritdoc /
         public async Task<IEnumerable<Message>> GetMessagesAsync(DateTime from, DateTime to)
         {
             try
@@ -40,15 +44,17 @@ namespace MessageService.API.Repositories
                 using var connection = new NpgsqlConnection(_connectionString);
 
                 return await connection.QueryAsync<Message>(
-                    "SELECT user_name AS UserName, text AS Text, timestamp AS Timestamp, client_order AS ClientOrder FROM messages WHERE timestamp BETWEEN @From AND @To ORDER BY timestamp",
+                    "SELECT user_name AS UserName, text AS Text, timestamp AS Timestamp, user_id AS UserId FROM messages WHERE timestamp BETWEEN @From AND @To ORDER BY timestamp",
                     new { From = from, To = to });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while fetching messages from the database");
+                _logger.LogError(ex, "MessageRepository.GetMessagesAsync {Message}{StackTrace}{InnerException}",
+                    ex.Message,
+                    ex.StackTrace,
+                    ex.InnerException?.Message);
                 throw;
             }
         }
-
     }
 }

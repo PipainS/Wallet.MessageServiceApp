@@ -1,8 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MessageClient3.Models;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace MessageClient3.Controllers
 {
