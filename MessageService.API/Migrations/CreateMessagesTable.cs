@@ -8,6 +8,7 @@ public class CreateMessagesTable : Migration
         Create.Table("messages")
             .WithColumn("id").AsInt32().PrimaryKey().Identity()
             .WithColumn("text").AsString(128).NotNullable()
+            .WithColumn("user_name").AsString(128).Nullable()
             .WithColumn("timestamp").AsDateTime().NotNullable().WithDefault(SystemMethods.CurrentUTCDateTime)
             .WithColumn("client_order").AsInt32().NotNullable();
     }

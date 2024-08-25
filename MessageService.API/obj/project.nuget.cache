@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "eVXnuFMFHyk=",
+  "dgSpecHash": "DLiOCCcDJ7A=",
   "success": true,
   "projectFilePath": "C:\\Users\\joker\\source\\repos\\Wallet.MessageService\\MessageService.API\\MessageService.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\joker\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\joker\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
@@ -28,7 +30,7 @@
     "C:\\Users\\joker\\.nuget\\packages\\fluentmigrator.runner.sqlite\\5.2.0\\fluentmigrator.runner.sqlite.5.2.0.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\fluentmigrator.runner.sqlserver\\5.2.0\\fluentmigrator.runner.sqlserver.5.2.0.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\joker\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\joker\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.4\\microsoft.data.sqlclient.5.1.4.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "C:\\Users\\joker\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

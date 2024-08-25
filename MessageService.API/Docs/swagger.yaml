@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: Message Service API
+  description: API для обмена сообщениями.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000/api
+    description: Локальный сервер разработки
+paths:
+  /messages/add:
+    post:
+      summary: Создать сообщение
+      description: Создает новое сообщение и рассылает его всем подключенным WebSocket-клиентам.
+      requestBody:
+        description: Сообщение для отправки.
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userName:
+                  type: string
+                  description: Имя пользователя, отправляющего сообщение. Если не указано, используется "Аноним".
+                text:
+                  type: string
+                  description: Текст сообщения.
+                timestamp:
+                  type: string
+                  format: date-time
+                  description: Временная метка отправки сообщения.
+              required:
+                - text
+      responses:
+        '200':
+          description: Сообщение успешно отправлено.
+        '500':
+          description: Внутренняя ошибка сервера.
+  /messages/get:
+    get:
+      summary: Получить сообщения
+      description: Получает сообщения в заданном временном интервале.
+      parameters:
+        - in: query
+          name: from
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: Начальная дата и время для получения сообщений.
+        - in: query
+          name: to
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: Конечная дата и время для получения сообщений.
+      responses:
+        '200':
+          description: Список сообщений в указанном интервале.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    userName:
+                      type: string
+                      description: Имя пользователя, отправившего сообщение.
+                    text:
+                      type: string
+                      description: Текст сообщения.
+                    timestamp:
+                      type: string
+                      format: date-time
+                      description: Временная метка сообщения.
+        '500':
+          description: Внутренняя ошибка сервера.

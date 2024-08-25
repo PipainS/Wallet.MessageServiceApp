@@ -1,0 +1,372 @@
+2024-08-25 10:26:00.4627 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 10:26:00.5207 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 10:26:00.5207 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 10:26:00.5207 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 10:26:10.7410 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 10:26:11.1414 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 399.9337ms 
+2024-08-25 10:26:13.2158 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 10:26:13.2158 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 10:26:13.2158 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 10:26:13.4739 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 10:26:13.4739 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 2.8034ms 
+2024-08-25 10:26:13.4739 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 10:26:13.6092 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 131.8924ms 
+2024-08-25 10:26:13.7082 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 10:26:13.9058 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 197.9838ms 
+2024-08-25 10:26:16.7662 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 POST http://localhost:5103/api/messages/add - application/json;+charset=utf-8 83 
+2024-08-25 10:26:16.7662 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 10:26:16.7903 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "PostMessage", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostMessage(MessageService.API.Models.Message) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 10:26:16.9044 | INFO | MessageService.API.Repositories.MessageRepository | Adding message to the database: фыв 
+2024-08-25 10:26:17.0046 | INFO | Microsoft.AspNetCore.Mvc.StatusCodeResult | Executing StatusCodeResult, setting HTTP status code 200 
+2024-08-25 10:26:17.0218 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.PostMessage (MessageService.API) in 215.5831ms 
+2024-08-25 10:26:17.0218 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 10:26:17.0258 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 POST http://localhost:5103/api/messages/add - 200 0 - 259.6009ms 
+2024-08-25 10:26:20.2024 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:16:20.1867307Z&to=2024-08-25T07:26:20.1867307Z - - - 
+2024-08-25 10:26:20.2024 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:26:20.2024 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 10:26:35.0924 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.Message, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 10:26:35.0924 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 14888.2182ms 
+2024-08-25 10:26:35.0924 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:26:35.0924 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:16:20.1867307Z&to=2024-08-25T07:26:20.1867307Z - 200 - application/json;+charset=utf-8 14894.8350ms 
+2024-08-25 10:26:35.1241 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:16:35.1184711Z&to=2024-08-25T07:26:35.1184711Z - - - 
+2024-08-25 10:26:35.1241 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:26:35.1241 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 10:26:37.9573 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.Message, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 10:26:37.9573 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 2833.5214ms 
+2024-08-25 10:26:37.9573 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:26:37.9573 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:16:35.1184711Z&to=2024-08-25T07:26:35.1184711Z - 200 - application/json;+charset=utf-8 2834.2282ms 
+2024-08-25 10:26:55.0731 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 10:26:55.1049 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 10:26:55.1049 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 10:26:55.1049 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 10:26:57.8496 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 10:26:58.2051 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 358.1950ms 
+2024-08-25 10:26:59.2896 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 10:26:59.3028 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 10:26:59.3143 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 10:26:59.6500 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 10:26:59.6567 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 6.6502ms 
+2024-08-25 10:26:59.6567 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 10:26:59.7001 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 42.9169ms 
+2024-08-25 10:26:59.8359 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 10:27:00.0547 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 218.7010ms 
+2024-08-25 10:27:24.8803 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:17:24.8614682Z&to=2024-08-25T07:27:24.8614682Z - - - 
+2024-08-25 10:27:24.8803 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:27:24.8992 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 10:27:28.9008 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 10:27:28.9008 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 4009.3223ms 
+2024-08-25 10:27:28.9008 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:27:28.9008 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:17:24.8614682Z&to=2024-08-25T07:27:24.8614682Z - 200 - application/json;+charset=utf-8 4034.7619ms 
+2024-08-25 10:27:28.9359 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:17:28.9308120Z&to=2024-08-25T07:27:28.9308120Z - - - 
+2024-08-25 10:27:28.9359 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:27:28.9359 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 10:27:30.2270 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 10:27:30.2270 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 1290.1034ms 
+2024-08-25 10:27:30.2270 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 10:27:30.2270 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:17:28.9308120Z&to=2024-08-25T07:27:28.9308120Z - 200 - application/json;+charset=utf-8 1291.8812ms 
+2024-08-25 11:00:06.3401 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:00:06.4022 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:00:06.4022 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:00:06.4022 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:00:09.9941 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 11:00:10.1337 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:00:10.2028 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 11:00:10.2178 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 11:00:10.5293 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 392.4603ms 
+2024-08-25 11:00:10.6935 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 11:00:10.6993 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 11:00:10.6993 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 8.2768ms 
+2024-08-25 11:00:10.7514 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 52.1595ms 
+2024-08-25 11:00:10.8833 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:00:11.0855 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 202.1729ms 
+2024-08-25 11:00:15.5033 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 POST http://localhost:5103/api/messages/add - application/json;+charset=utf-8 88 
+2024-08-25 11:00:15.5033 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 11:00:15.5355 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "PostMessage", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostMessage(MessageService.API.Models.Message) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:00:15.6934 | INFO | MessageService.API.Repositories.MessageRepository | Adding message to the database: ффывqwe 
+2024-08-25 11:00:15.7894 | INFO | Microsoft.AspNetCore.Mvc.StatusCodeResult | Executing StatusCodeResult, setting HTTP status code 200 
+2024-08-25 11:00:15.8040 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.PostMessage (MessageService.API) in 254.482ms 
+2024-08-25 11:00:15.8040 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 11:00:15.8075 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 POST http://localhost:5103/api/messages/add - 200 0 - 304.1863ms 
+2024-08-25 11:00:17.5035 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:50:17.4873586Z&to=2024-08-25T08:00:17.4873586Z - - - 
+2024-08-25 11:00:17.5035 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:00:17.5035 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:00:21.2099 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 11:00:21.2155 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 3705.9919ms 
+2024-08-25 11:00:21.2155 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:00:21.2155 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:50:17.4873586Z&to=2024-08-25T08:00:17.4873586Z - 200 - application/json;+charset=utf-8 3712.2873ms 
+2024-08-25 11:00:21.2424 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:50:21.2375049Z&to=2024-08-25T08:00:21.2375049Z - - - 
+2024-08-25 11:00:21.2424 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:00:21.2424 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:00:21.2460 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 11:00:21.2460 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 3.4636ms 
+2024-08-25 11:00:21.2460 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:00:21.2460 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:50:21.2375049Z&to=2024-08-25T08:00:21.2375049Z - 200 - application/json;+charset=utf-8 4.0498ms 
+2024-08-25 11:01:01.0639 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 POST http://localhost:5103/api/messages/add - application/json;+charset=utf-8 81 
+2024-08-25 11:01:01.0639 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 11:01:01.0639 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "PostMessage", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostMessage(MessageService.API.Models.Message) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:01:01.0763 | INFO | MessageService.API.Repositories.MessageRepository | Adding message to the database: ффывqwe 
+2024-08-25 11:01:01.0763 | INFO | Microsoft.AspNetCore.Mvc.StatusCodeResult | Executing StatusCodeResult, setting HTTP status code 200 
+2024-08-25 11:01:01.0763 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.PostMessage (MessageService.API) in 9.3644ms 
+2024-08-25 11:01:01.0763 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 11:01:01.0763 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 POST http://localhost:5103/api/messages/add - 200 0 - 16.1407ms 
+2024-08-25 11:01:02.3645 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:51:02.3576619Z&to=2024-08-25T08:01:02.3576619Z - - - 
+2024-08-25 11:01:02.3645 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:01:02.3645 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:01:02.3645 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 11:01:02.3645 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 2.3312ms 
+2024-08-25 11:01:02.3645 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:01:02.3645 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:51:02.3576619Z&to=2024-08-25T08:01:02.3576619Z - 200 - application/json;+charset=utf-8 3.6229ms 
+2024-08-25 11:01:02.3772 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:51:02.3730655Z&to=2024-08-25T08:01:02.3730655Z - - - 
+2024-08-25 11:01:02.3772 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:01:02.3772 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:01:02.3772 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 11:01:02.3772 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 2.7795ms 
+2024-08-25 11:01:02.3772 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:01:02.3772 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:51:02.3730655Z&to=2024-08-25T08:01:02.3730655Z - 200 - application/json;+charset=utf-8 3.4914ms 
+2024-08-25 11:07:26.6668 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:07:26.6992 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:07:26.6992 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:07:26.6992 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:07:31.3782 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:07:31.6272 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 246.7556ms 
+2024-08-25 11:07:32.1922 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 11:07:32.2035 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 11:07:32.2151 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 11:07:32.4321 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 11:07:32.4321 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 11:07:32.4615 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 29.3026ms 
+2024-08-25 11:07:32.6729 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 239.8182ms 
+2024-08-25 11:07:32.7906 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:07:33.0033 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 212.7017ms 
+2024-08-25 11:07:35.4537 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:57:35.4330305Z&to=2024-08-25T08:07:35.4330305Z - - - 
+2024-08-25 11:07:35.4537 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:07:35.4812 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:07:35.7890 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 11:07:35.8133 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 322.8993ms 
+2024-08-25 11:07:35.8133 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:07:35.8133 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:57:35.4330305Z&to=2024-08-25T08:07:35.4330305Z - 200 - application/json;+charset=utf-8 362.3542ms 
+2024-08-25 11:07:35.8590 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:57:35.8522915Z&to=2024-08-25T08:07:35.8522915Z - - - 
+2024-08-25 11:07:35.8590 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:07:35.8590 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:07:35.8590 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 11:07:35.8590 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 5.9254ms 
+2024-08-25 11:07:35.8590 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 11:07:35.8590 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T07:57:35.8522915Z&to=2024-08-25T08:07:35.8522915Z - 200 - application/json;+charset=utf-8 8.0052ms 
+2024-08-25 11:07:52.1102 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 POST http://localhost:5103/api/messages/add - application/json;+charset=utf-8 81 
+2024-08-25 11:07:52.1102 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 11:07:52.1102 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "PostMessage", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostMessage(MessageService.API.Models.Message) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 11:07:52.1281 | INFO | MessageService.API.Repositories.MessageRepository | Adding message to the database: фы 
+2024-08-25 11:07:52.1456 | INFO | Microsoft.AspNetCore.Mvc.StatusCodeResult | Executing StatusCodeResult, setting HTTP status code 200 
+2024-08-25 11:07:52.1456 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.PostMessage (MessageService.API) in 30.3588ms 
+2024-08-25 11:07:52.1456 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 11:07:52.1456 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 POST http://localhost:5103/api/messages/add - 200 0 - 35.9528ms 
+2024-08-25 11:13:49.1316 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:13:49.1600 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:13:49.1600 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:13:49.1600 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:13:51.2680 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 11:13:51.4088 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 11:13:51.4088 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 11:13:53.7372 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:13:54.1167 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 404 0 - 374.7324ms 
+2024-08-25 11:13:54.1191 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5103/swagger/index.html, Response status code: 404 
+2024-08-25 11:14:10.7402 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:14:10.7713 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:14:10.7713 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:14:10.7713 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:14:15.0607 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 11:14:15.1987 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 11:14:15.1987 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 11:14:15.8620 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:14:16.3324 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 466.8943ms 
+2024-08-25 11:14:16.3581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 11:14:16.3581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 11:14:16.3581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 5.7398ms 
+2024-08-25 11:14:16.4056 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 43.7631ms 
+2024-08-25 11:14:16.5439 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:14:16.6947 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 150.7132ms 
+2024-08-25 11:16:44.6707 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:16:44.7076 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:16:44.7076 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:16:44.7076 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:16:46.1650 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:16:46.4351 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 273.7516ms 
+2024-08-25 11:16:46.4705 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 11:16:46.4705 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 11:16:46.4705 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 2.8786ms 
+2024-08-25 11:16:46.5145 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 42.8445ms 
+2024-08-25 11:16:46.5870 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:16:46.7080 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 121.0175ms 
+2024-08-25 11:16:48.5570 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:16:48.5570 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 11.1378ms 
+2024-08-25 11:16:48.5932 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/favicon.ico - - - 
+2024-08-25 11:16:48.6041 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/favicon.ico - 404 0 - 10.9597ms 
+2024-08-25 11:16:48.6041 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5103/favicon.ico, Response status code: 404 
+2024-08-25 11:18:15.6388 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:18:15.6629 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:18:15.6629 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:18:15.6629 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:18:17.3287 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:19:33.9786 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:19:34.0167 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:19:34.0167 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:19:34.0167 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:19:36.0469 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:19:36.2269 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 404 0 - 187.2665ms 
+2024-08-25 11:19:36.2269 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5103/swagger/index.html, Response status code: 404 
+2024-08-25 11:19:51.1215 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:19:51.1494 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:19:51.1504 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:19:51.1504 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:19:53.8606 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:19:54.1119 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 260.4590ms 
+2024-08-25 11:19:54.1325 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 11:19:54.1325 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 11:19:54.1325 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 2.5589ms 
+2024-08-25 11:19:54.1751 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 41.7698ms 
+2024-08-25 11:19:54.2552 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:19:54.4081 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 152.9843ms 
+2024-08-25 11:19:59.0370 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:19:59.0509 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 14.0473ms 
+2024-08-25 11:19:59.8059 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/favicon.ico - - - 
+2024-08-25 11:19:59.8168 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/favicon.ico - 404 0 - 10.9401ms 
+2024-08-25 11:19:59.8168 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5103/favicon.ico, Response status code: 404 
+2024-08-25 11:21:59.5641 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:21:59.5838 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:21:59.5838 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:21:59.5838 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:22:01.1551 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:22:01.4189 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 267.3198ms 
+2024-08-25 11:22:01.4379 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 11:22:01.4379 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 11:22:01.4379 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 2.3487ms 
+2024-08-25 11:22:01.4759 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 37.0153ms 
+2024-08-25 11:22:01.5496 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:22:01.6974 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 147.8484ms 
+2024-08-25 11:29:01.0498 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/add - - - 
+2024-08-25 11:29:01.0767 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '405 HTTP Method Not Supported' 
+2024-08-25 11:29:01.0767 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint '405 HTTP Method Not Supported' 
+2024-08-25 11:29:01.0767 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/add - 405 0 - 32.0544ms 
+2024-08-25 11:29:07.2558 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages - - - 
+2024-08-25 11:29:07.2604 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages - 404 0 - 4.6786ms 
+2024-08-25 11:29:07.2604 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5103/api/messages, Response status code: 404 
+2024-08-25 11:43:12.8032 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 11:43:12.8294 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 11:43:12.8294 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 11:43:12.8294 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 11:43:14.9792 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 11:43:15.3459 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 381.8984ms 
+2024-08-25 11:43:15.3712 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 11:43:15.3712 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 11:43:15.3712 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 4.1878ms 
+2024-08-25 11:43:15.4254 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 51.5908ms 
+2024-08-25 11:43:15.4972 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 11:43:15.6035 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 106.2252ms 
+2024-08-25 12:01:19.1950 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 12:01:19.2166 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 12:01:19.2166 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 12:01:19.2166 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 12:01:21.4395 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 12:01:21.6232 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 195.4502ms 
+2024-08-25 12:01:22.2343 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 12:01:22.2343 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 12:01:22.2343 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 2.5771ms 
+2024-08-25 12:01:22.2697 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 33.6162ms 
+2024-08-25 12:01:22.3724 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 12:01:22.4785 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 106.1105ms 
+2024-08-25 12:01:52.5541 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 12:01:52.5773 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 12:01:52.5773 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 12:01:52.5773 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 12:01:57.4054 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 12:01:57.6562 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 262.0155ms 
+2024-08-25 12:02:01.6495 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 12:02:01.6641 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 12:02:01.6641 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 12:02:01.6689 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 4.4442ms 
+2024-08-25 12:02:01.6689 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 12:02:01.6689 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 12:02:01.9248 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 255.5391ms 
+2024-08-25 12:02:02.0477 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 12:02:02.2936 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 246.3883ms 
+2024-08-25 12:03:37.9400 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 12:03:37.9656 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 12:03:37.9656 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 12:03:37.9656 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 12:03:43.4315 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 12:03:43.8016 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 382.9262ms 
+2024-08-25 12:03:44.2030 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 12:03:44.2139 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 12:03:44.2139 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 12:03:44.3153 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 12:03:44.3265 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 12:03:44.3265 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 13.9592ms 
+2024-08-25 12:03:44.4249 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 97.4234ms 
+2024-08-25 12:03:44.5248 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 12:03:44.7473 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 222.7163ms 
+2024-08-25 12:04:42.6107 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 12:04:42.6422 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 12:04:42.6422 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 12:04:42.6422 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 12:04:44.9984 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 12:04:45.2807 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 289.7435ms 
+2024-08-25 12:04:46.8311 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 12:04:46.8311 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 12:04:46.8680 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 36.9109ms 
+2024-08-25 12:04:46.9944 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 163.3422ms 
+2024-08-25 12:04:47.1281 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 12:04:47.3421 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 214.1768ms 
+2024-08-25 12:04:47.8492 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 12:04:47.8628 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 12:04:47.8628 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 12:04:53.6826 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 POST http://localhost:5103/api/messages/add - application/json;+charset=utf-8 85 
+2024-08-25 12:04:53.6826 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 12:04:53.7032 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "PostMessage", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostMessage(MessageService.API.Models.Message) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 12:04:53.8404 | INFO | MessageService.API.Repositories.MessageRepository | Adding message to the database: ффывqwe 
+2024-08-25 12:04:53.9067 | INFO | Microsoft.AspNetCore.Mvc.StatusCodeResult | Executing StatusCodeResult, setting HTTP status code 200 
+2024-08-25 12:04:53.9067 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.PostMessage (MessageService.API) in 204.1856ms 
+2024-08-25 12:04:53.9067 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.PostMessage (MessageService.API)' 
+2024-08-25 12:04:53.9067 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 POST http://localhost:5103/api/messages/add - 200 0 - 232.5967ms 
+2024-08-25 12:06:41.2308 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5103 
+2024-08-25 12:06:41.3408 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-08-25 12:06:41.3408 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-08-25 12:06:41.3408 | INFO | Microsoft.Hosting.Lifetime | Content root path: C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API 
+2024-08-25 12:06:43.0827 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/ws - - - 
+2024-08-25 12:06:43.1687 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint '/ws' 
+2024-08-25 12:06:43.1687 | INFO | WebSocketHandler | WebSocket connection established 
+2024-08-25 12:06:46.0420 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/index.html - - - 
+2024-08-25 12:06:46.3165 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/index.html - 200 - text/html;charset=utf-8 274.1545ms 
+2024-08-25 12:06:47.5575 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:47.5029004Z&to=2024-08-25T09:06:47.5029004Z - - - 
+2024-08-25 12:06:47.5575 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:47.5857 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 12:06:47.7995 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - - - 
+2024-08-25 12:06:47.8069 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript;+charset=utf-8 7.7207ms 
+2024-08-25 12:06:47.8069 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/_vs/browserLink - - - 
+2024-08-25 12:06:47.8499 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 42.7083ms 
+2024-08-25 12:06:47.8552 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 12:06:47.8777 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 281.9851ms 
+2024-08-25 12:06:47.8777 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:47.8777 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:47.5029004Z&to=2024-08-25T09:06:47.5029004Z - 200 - application/json;+charset=utf-8 324.4576ms 
+2024-08-25 12:06:47.9255 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:47.9191001Z&to=2024-08-25T09:06:47.9191001Z - - - 
+2024-08-25 12:06:47.9255 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:47.9255 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 12:06:47.9350 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 12:06:47.9350 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 8.5041ms 
+2024-08-25 12:06:47.9350 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:47.9350 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:47.9191001Z&to=2024-08-25T09:06:47.9191001Z - 200 - application/json;+charset=utf-8 10.5161ms 
+2024-08-25 12:06:47.9781 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - - - 
+2024-08-25 12:06:48.1098 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 131.7597ms 
+2024-08-25 12:06:48.9311 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:48.9249741Z&to=2024-08-25T09:06:48.9249741Z - - - 
+2024-08-25 12:06:48.9311 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:48.9321 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 12:06:48.9321 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 12:06:48.9321 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 3.7913ms 
+2024-08-25 12:06:48.9321 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:48.9321 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:48.9249741Z&to=2024-08-25T09:06:48.9249741Z - 200 - application/json;+charset=utf-8 5.4514ms 
+2024-08-25 12:06:48.9321 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:48.9423785Z&to=2024-08-25T09:06:48.9423785Z - - - 
+2024-08-25 12:06:48.9472 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:48.9472 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetMessages", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMessages(System.DateTime, System.DateTime) on controller MessageService.API.Controllers.MessageController (MessageService.API). 
+2024-08-25 12:06:48.9472 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MessageService.API.Models.DTOs.MessageDto, MessageService.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-08-25 12:06:48.9472 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action MessageService.API.Controllers.MessageController.GetMessages (MessageService.API) in 3.6317ms 
+2024-08-25 12:06:48.9472 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'MessageService.API.Controllers.MessageController.GetMessages (MessageService.API)' 
+2024-08-25 12:06:48.9472 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5103/api/messages/get?from=2024-08-25T08:56:48.9423785Z&to=2024-08-25T09:06:48.9423785Z - 200 - application/json;+charset=utf-8 4.3938ms 

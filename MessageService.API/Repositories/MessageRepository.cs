@@ -24,8 +24,7 @@ namespace MessageService.API.Repositories
 
                 using var connection = new NpgsqlConnection(_connectionString);
                 await connection.ExecuteAsync(
-                    "INSERT INTO public.messages (text, timestamp, client_order) VALUES (@Text, @Timestamp, @ClientOrder)",
-                    message);
+                    "INSERT INTO public.messages (user_name, text, timestamp, client_order) VALUES (@UserName, @Text, @Timestamp, @ClientOrder)", message);
             }
             catch (Exception ex)
             {
@@ -38,10 +37,10 @@ namespace MessageService.API.Repositories
         {
             try
             {
-
                 using var connection = new NpgsqlConnection(_connectionString);
+
                 return await connection.QueryAsync<Message>(
-                    "SELECT * FROM messages WHERE timestamp BETWEEN @From AND @To ORDER BY timestamp",
+                    "SELECT user_name AS UserName, text AS Text, timestamp AS Timestamp, client_order AS ClientOrder FROM messages WHERE timestamp BETWEEN @From AND @To ORDER BY timestamp",
                     new { From = from, To = to });
             }
             catch (Exception ex)
@@ -50,5 +49,6 @@ namespace MessageService.API.Repositories
                 throw;
             }
         }
+
     }
 }

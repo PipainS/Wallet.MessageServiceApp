@@ -1,4 +1,5 @@
-﻿using System.Net.WebSockets;
+﻿using MessageService.API.Constants;
+using System.Net.WebSockets;
 using System.Text;
 
 public class WebSocketHandler
@@ -14,39 +15,62 @@ public class WebSocketHandler
 
     public async Task HandleWebSocketConnection(HttpContext context)
     {
-        if (context.WebSockets.IsWebSocketRequest)
+        try
         {
-            _logger.LogInformation("WebSocket connection established");
-
-            var socket = await context.WebSockets.AcceptWebSocketAsync();
-            var socketId = _connectionManager.AddSocket(socket);
-
-            await ReceiveMessages(socket, async (result, buffer) =>
+            if (context.WebSockets.IsWebSocketRequest)
             {
-                if (result.MessageType == WebSocketMessageType.Text)
+                _logger.LogInformation("WebSocket connection established");
+
+                var socket = await context.WebSockets.AcceptWebSocketAsync();
+                var socketId = _connectionManager.AddSocket(socket);
+
+                await ReceiveMessages(socket, async (result, buffer) =>
                 {
-                    var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                    await SendMessageToAllAsync(message);
-                }
-                else if (result.MessageType == WebSocketMessageType.Close)
-                {
-                    await _connectionManager.RemoveSocket(socketId);
-                }
-            });
+                    if (result.MessageType == WebSocketMessageType.Text)
+                    {
+                        var message = Encoding.UTF8.GetString(buffer, WebSocketConstants.BufferStartIndex, result.Count);
+                        await SendMessageToAllAsync(message);
+                    }
+                    else if (result.MessageType == WebSocketMessageType.Close)
+                    {
+                        await _connectionManager.RemoveSocket(socketId);
+                    }
+                });
+            }
+            else
+            {
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            context.Response.StatusCode = 400;
+            _logger.LogError(ex, "WebSocketHandler.HandleWebSocketConnection: {Message}{StackTrace}{InnerException}",
+                ex.Message,
+                ex.StackTrace,
+                ex.InnerException?.Message);
+
+            context.Response.StatusCode = StatusCodes.Status500InternalServerError;
         }
     }
 
     private async Task ReceiveMessages(WebSocket socket, Action<WebSocketReceiveResult, byte[]> handleMessage)
     {
-        var buffer = new byte[1024 * 4];
-        while (socket.State == WebSocketState.Open)
+        var buffer = new byte[WebSocketConstants.BufferSize];
+
+        try
         {
-            var result = await socket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
-            handleMessage(result, buffer);
+            while (socket.State == WebSocketState.Open)
+            {
+                var result = await socket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                handleMessage(result, buffer);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "WebSocketHandler.ReceiveMessages: {Message}{StackTrace}{InnerException}",
+                ex.Message,
+                ex.StackTrace,
+                ex.InnerException?.Message);
         }
     }
 
@@ -59,13 +83,17 @@ public class WebSocketHandler
             {
                 if (socket.State == WebSocketState.Open)
                 {
-                    await socket.SendAsync(new ArraySegment<byte>(buffer, 0, buffer.Length), WebSocketMessageType.Text, true, CancellationToken.None);
+                    await socket.SendAsync(new ArraySegment<byte>(buffer, WebSocketConstants.BufferStartIndex, buffer.Length), 
+                        WebSocketMessageType.Text, true, CancellationToken.None);
                 }
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error occurred while sending message to clients");
+            _logger.LogError(ex, "WebSocketHandler.SendMessageToAllAsync: {Message}{StackTrace}{InnerException}",
+                ex.Message, 
+                ex.StackTrace, 
+                ex.InnerException?.Message);
         }
     }
 }

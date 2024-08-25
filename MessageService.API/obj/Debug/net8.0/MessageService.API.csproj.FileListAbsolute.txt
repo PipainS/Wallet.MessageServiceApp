@@ -92,3 +92,6 @@ C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API\bin\Debug\n
 C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API\bin\Debug\net8.0\NLog.dll
 C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API\bin\Debug\net8.0\NLog.Extensions.Logging.dll
 C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API\bin\Debug\net8.0\NLog.Web.AspNetCore.dll
+C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API\obj\Debug\net8.0\MessageService.API.sourcelink.json
+C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\joker\source\repos\Wallet.MessageService\MessageService.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

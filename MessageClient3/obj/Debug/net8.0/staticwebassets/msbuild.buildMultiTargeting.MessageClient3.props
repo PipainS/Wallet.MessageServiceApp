@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MessageClient3.props" />
+</Project>

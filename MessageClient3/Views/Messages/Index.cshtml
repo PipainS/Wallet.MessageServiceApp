@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MessageClient3.Models.Message>
+
+@{
+    ViewData["Title"] = "Messages";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<button id="getMessagesButton">Получить сообщения за 10 минут</button>
+
+<div id="messagesContainer"></div>
+
+@section Scripts {
+    <script src="~/js/site.js"></script>
+}

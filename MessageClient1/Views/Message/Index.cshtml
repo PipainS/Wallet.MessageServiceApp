@@ -1,0 +1,26 @@
+﻿@model MessageClient1.Models.Message
+
+<h2>Send Message</h2>
+
+<form asp-action="Send" method="post">
+    <div class="form-group" style="margin-bottom: 10px">
+        <label asp-for="UserName" class="control-label"></label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 10px">
+        <label asp-for="Text" class="control-label"></label>
+        <input asp-for="Text" class="form-control" />
+        <span asp-validation-for="Text" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+<div>
+    @if (ViewData["MessageStatus"] != null)
+    {
+        <p>@ViewData["MessageStatus"]</p>
+    }
+</div>

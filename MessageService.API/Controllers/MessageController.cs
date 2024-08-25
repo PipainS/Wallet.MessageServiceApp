@@ -1,49 +1,67 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MessageService.API.Models;
-using MessageService.API.Repositories;
+﻿    using Microsoft.AspNetCore.Mvc;
+    using MessageService.API.Models;
+    using MessageService.API.Repositories;
+    using MessageService.API.Models.DTOs;
+    using AutoMapper;
 
-namespace MessageService.API.Controllers
-{
-    [ApiController]
-    [Route("api/messages")]
-    public class MessageController : ControllerBase
+    namespace MessageService.API.Controllers
     {
-        private readonly MessageRepository _repository;
-        private readonly WebSocketHandler _webSocketHandler;
-        private readonly ILogger<MessageController> _logger;
-
-        public MessageController(MessageRepository repository, WebSocketHandler webSocketHandler, ILogger<MessageController> logger)
+        [ApiController]
+        [Route("api/messages")]
+        public class MessageController : ControllerBase
         {
-            _repository = repository;
-            _webSocketHandler = webSocketHandler;
-            _logger = logger;
-        }
+            private readonly MessageRepository _repository;
+            private readonly WebSocketHandler _webSocketHandler;
+            private readonly ILogger<MessageController> _logger;
+            private readonly IMapper _mapper;
 
-        [HttpPost("api/messages")]
-        public async Task<IActionResult> PostMessage([FromBody] Message message)
-        {
-            try
+            public MessageController(MessageRepository repository, WebSocketHandler webSocketHandler, ILogger<MessageController> logger, IMapper mapper)
             {
-                message.Timestamp = DateTime.UtcNow;
-                await _repository.SaveMessageAsync(message);
-
-                // Отправляем сообщение по WebSocket всем подключенным клиентам
-                await _webSocketHandler.SendMessageToAllAsync($"{message.Timestamp}: {message.Text}");
-
-                return Ok();
+                _repository = repository;
+                _webSocketHandler = webSocketHandler;
+                _logger = logger;
+                _mapper = mapper;
+                _mapper = mapper;
             }
-            catch (Exception ex)
+
+            [HttpPost("add")]
+            public async Task<IActionResult> PostMessage([FromBody] Message message)
             {
-                _logger.LogError(ex, "Error occurred while processing message");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
-        }
+                try
+                {
+                    message.Timestamp = DateTime.UtcNow;
+                    await _repository.SaveMessageAsync(message);
 
-        [HttpGet]
-        public async Task<IActionResult> GetMessages([FromQuery] DateTime from, [FromQuery] DateTime to)
-        {
-            var messages = await _repository.GetMessagesAsync(from, to);
-            return Ok(messages);
+                    string userName = string.IsNullOrWhiteSpace(message.UserName) ? "Аноним" : message.UserName;
+                    // Отправляем сообщение по WebSocket всем подключенным клиентам
+                    await _webSocketHandler.SendMessageToAllAsync($"{message.Timestamp} {userName}: {message.Text}");
+
+
+                    return Ok();
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"MessageController.PostMessage: {ex.Message}{ex.StackTrace}{ex.InnerException?.Message}");
+                    return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+                }
+            }
+
+            [HttpGet("get")]
+            public async Task<IActionResult> GetMessages([FromQuery] DateTime from, [FromQuery] DateTime to)
+            {
+                try
+                {
+                    var messages = await _repository.GetMessagesAsync(from, to);
+
+                    var messageDtos = _mapper.Map<IEnumerable<MessageDto>>(messages);
+
+                    return Ok(messageDtos);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"MessageController.GetMessages: {ex.Message}{ex.StackTrace}{ex.InnerException?.Message}");
+                    return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+                }
+            }
         }
     }
-}
