@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5103:5103" 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Database=message_service;Username=postgres;Password=admin
+    depends_on:
+      - db
+
+  client1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7172:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  client2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7046:80"
+
+  client3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7174:80"
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: message_service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
