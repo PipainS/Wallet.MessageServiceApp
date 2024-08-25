@@ -17,7 +17,7 @@
 
 ## Технологии
 
-- .NET 7
+- .NET 8
 - ASP.NET Core
 - PostgreSQL
 - WebSocket
@@ -29,16 +29,5 @@
 - Docker и Docker Compose
 
 ### Для ветки `withoutDocker`:
-- .NET 7 SDK
+- .NET 8 SDK
 - PostgreSQL (должен быть установлен и настроен локально)
-
-## Установка и запуск
-
-### Ветка `withDocker`
-
-#### Шаг 1: Клонируйте репозиторий и переключитесь на ветку `withDocker`
-
-```bash
-git clone https://github.com/your-username/MessageExchangeService.git
-cd MessageExchangeService
-git checkout withDocker
